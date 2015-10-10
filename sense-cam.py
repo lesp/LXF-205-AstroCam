@@ -25,12 +25,13 @@ def takepic(timer,toggle):
         time.sleep(5)
         camera.stop_preview()
         camera.annotate_text = 'This image has a temperature of %s C' % temp
-        time.sleep(2)
+        time.sleep(0.1)
         camera.capture('/home/pi/'+(a)+'.jpg')
 
 def flash(toggle):
     print(toggle)
     if toggle == 'on':
+        """
         X = [0,0,0] #No lights
         O = [255,255,255] #White
         flash = [
@@ -44,6 +45,8 @@ def flash(toggle):
             O,O,O,O,O,O,O,O
             ]
         sense.set_pixels(flash)
+        """
+        sense.clear(255,255,255)
     elif toggle == 'off':
         sense.clear()
         
