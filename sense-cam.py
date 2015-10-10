@@ -31,21 +31,6 @@ def takepic(timer,toggle):
 def flash(toggle):
     print(toggle)
     if toggle == 'on':
-        """
-        X = [0,0,0] #No lights
-        O = [255,255,255] #White
-        flash = [
-            O,O,O,O,O,O,O,O,
-            O,O,O,O,O,O,O,O,
-            O,O,O,O,O,O,O,O,
-            O,O,O,O,O,O,O,O,
-            O,O,O,O,O,O,O,O,
-            O,O,O,O,O,O,O,O,
-            O,O,O,O,O,O,O,O,
-            O,O,O,O,O,O,O,O
-            ]
-        sense.set_pixels(flash)
-        """
         sense.clear(255,255,255)
     elif toggle == 'off':
         sense.clear()
